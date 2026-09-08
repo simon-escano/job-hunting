@@ -52,7 +52,7 @@ export function useJobs() {
     }
   }
 
-  async function updateJobStatus(id: string, status: string) {
+  async function updateJobStatus(id: number, status: string) {
     // Optimistic update
     setJobs((prev) => prev.map((j) => (j.id === id ? { ...j, status } : j)));
     
@@ -62,7 +62,6 @@ export function useJobs() {
       .eq('id', id);
       
     if (err) {
-      // Revert on error (for simplicity just refetch, or we can leave it)
       fetchJobs();
       throw err;
     }

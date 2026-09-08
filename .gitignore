@@ -10,6 +10,7 @@ __pycache__/
 
 # Build outputs
 web/dist/
+*.tsbuildinfo
 
 # Engine build cache (PDFs uploaded to Supabase Storage)
 engine/resumes/*.pdf
