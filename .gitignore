@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+
+# Environment secrets
+.env
+.env.local
+.env.*.local
+
+# Build outputs
+web/dist/
+
+# Engine build cache (PDFs uploaded to Supabase Storage)
+engine/resumes/*.pdf
+
+# Legacy (kept for reference, not actively used)
+dist/
+pipeline.db
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

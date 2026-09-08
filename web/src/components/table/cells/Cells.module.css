@@ -1,0 +1,113 @@
+.cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-4);
+  height: 100%;
+}
+
+.subtext {
+  font-size: var(--font-small);
+  color: var(--text-muted);
+}
+
+/* TierCell */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-small);
+  font-weight: 600;
+  width: max-content;
+  color: #000;
+}
+.badgeTarget {
+  background-color: var(--color-chartreuse);
+}
+.badgeStretch {
+  background-color: var(--color-lemon);
+}
+
+/* CompanyCell */
+.companyName {
+  font-size: var(--font-body);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.roleTitle {
+  font-size: var(--font-small);
+  color: var(--text-primary);
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin-top: var(--space-1);
+}
+.tag {
+  font-size: 11px;
+  padding: 2px 6px;
+  background: var(--bg-surface-hover);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+}
+
+/* SalaryCell */
+.salaryText {
+  font-size: var(--font-small);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* ListingCell */
+.applyBtn {
+  width: max-content;
+}
+.domainText {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.chips {
+  display: flex;
+  gap: var(--space-2);
+}
+.chip {
+  font-size: 11px;
+  color: var(--accent);
+  text-decoration: none;
+}
+.chip:hover {
+  text-decoration: underline;
+}
+
+/* OutreachCell */
+.contactText {
+  font-size: var(--font-small);
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.actionRow {
+  display: flex;
+  gap: var(--space-1);
+}
+
+/* StatusCell */
+.statusSelect {
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(0,0,0,0.1);
+  font-size: var(--font-small);
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+  appearance: none;
+  outline: none;
+}
+.statusSelect:focus {
+  border-color: #000;
+}

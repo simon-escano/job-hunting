@@ -1,0 +1,72 @@
+.tableContainer {
+  flex: 1;
+  overflow: auto;
+  position: relative;
+  background: var(--bg-canvas);
+}
+
+.table {
+  min-width: max-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerRow {
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.headerCell {
+  position: relative;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-small);
+  font-weight: 600;
+  color: var(--text-muted);
+  user-select: none;
+  display: flex;
+  align-items: center;
+}
+
+.resizer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  cursor: col-resize;
+  background: transparent;
+}
+.resizer:hover, .resizer:active {
+  background: var(--accent);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-canvas);
+  transition: background-color var(--transition-micro);
+}
+.row:hover {
+  background: var(--bg-surface-hover);
+}
+
+.cellWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.empty {
+  padding: var(--space-8);
+  text-align: center;
+  color: var(--text-muted);
+  font-size: var(--font-body);
+}
