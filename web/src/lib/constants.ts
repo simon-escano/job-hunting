@@ -1,7 +1,5 @@
-import { ColumnConfig } from './types';
-
 export const CURRENCY_RATES: Record<string, number> = {
-  USD: 1,
+  USD: 1.0,
   PHP: 58.5,
   EUR: 0.92,
   GBP: 0.77,
@@ -20,35 +18,29 @@ export const STATUS_OPTIONS = [
   'To Review',
   'Applied',
   'Interviewing',
-  'Offered',
+  'Offer',
   'Rejected',
-  'Ghosted',
 ];
 
-export const STATUS_COLORS: Record<string, string> = {
-  'To Review': 'var(--status-toreview)',
-  'Applied': 'var(--status-applied)',
-  'Interviewing': 'var(--status-interviewing)',
-  'Offered': 'var(--status-offered)',
-  'Rejected': 'var(--status-rejected)',
-  'Ghosted': 'var(--status-ghosted)',
+export const DEFAULT_COL_WIDTHS: Record<string, number> = {
+  tier: 140,
+  company: 250,
+  salary: 155,
+  date: 105,
+  listing: 195,
+  outreach: 290,
+  status: 140,
 };
 
-export const DEFAULT_COLUMNS: ColumnConfig[] = [
-  { key: 'tier', label: 'Tier', width: 100, minWidth: 80 },
-  { key: 'companyRole', label: 'Company & Role', width: 250, minWidth: 150 },
-  { key: 'salary', label: 'Salary', width: 120, minWidth: 80 },
-  { key: 'datePosted', label: 'Date Posted', width: 120, minWidth: 80 },
-  { key: 'listing', label: 'Listing & Resume', width: 200, minWidth: 150 },
-  { key: 'outreach', label: 'Contact & Outreach', width: 200, minWidth: 150 },
-  { key: 'status', label: 'Status', width: 150, minWidth: 100 },
-];
-
-export const DEFAULT_JOB_SITES = [
-  'https://weworkremotely.com/',
-  'https://remoteok.com/',
-  'https://startup.jobs/'
-];
+export const DEFAULT_JOB_SITES = `https://himalayas.app/jobs?remote_location=Anywhere
+https://wellfound.com/jobs
+https://www.workatastartup.com/companies
+https://weworkremotely.com/categories/remote-back-end-programming-jobs
+https://remoteok.com/remote-dev-jobs
+https://jobspresso.co/remote-software-jobs/
+https://boards.greenhouse.io
+https://jobs.lever.co
+https://jobs.ashbyhq.com`;
 
 export const CURRENCY_SYMBOLS: Record<string, string> = {
   USD: '$',
@@ -57,11 +49,5 @@ export const CURRENCY_SYMBOLS: Record<string, string> = {
   GBP: '£',
   AUD: 'A$',
   CAD: 'C$',
-  SGD: 'S$'
+  SGD: 'S$',
 };
-
-export const BLACKLISTED_DOMAINS = [
-  'turing.com',
-  'crossover.com',
-  'bairesdev.com'
-];
